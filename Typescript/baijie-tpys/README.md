@@ -28,3 +28,13 @@ Button 组件需求分析：
 
     npm install classnames --save // 便于切换类名
     npm install @types/classnames --save
+
+组件测试
+高质量的代码
+更早的发现 bug,减少成本
+让重构和升级变得更加容易和可靠
+让开发流程更加敏捷
+
+jest 组件库来做单元测试
+
+地址：https://jestjs.io/

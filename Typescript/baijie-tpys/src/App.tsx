@@ -13,7 +13,7 @@ function App() {
           <Button target="_blank" btnType={ButtonType.Link} href="http://www.baidu.com">baidu link</Button>
           <Button btnType={ButtonType.Danger} >Danger</Button>
           <Button btnType={ButtonType.Default} >Danger</Button>
-          <Button btnType={ButtonType.Primary} >Danger</Button>
+          <Button btnType={ButtonType.Primary} >Primary</Button>
 
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
