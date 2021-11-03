@@ -35,6 +35,11 @@ Button 组件需求分析：
 让重构和升级变得更加容易和可靠
 让开发流程更加敏捷
 
+Manual
+ui test
+service test
+unit test
+
 jest 组件库来做单元测试
 
 地址：https://jestjs.io/
