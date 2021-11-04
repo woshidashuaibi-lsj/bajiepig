@@ -42,4 +42,6 @@ unit test
 
 jest 组件库来做单元测试
 
+react 测试工具 enzyme / react Testing library
+
 地址：https://jestjs.io/
