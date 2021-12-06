@@ -1,6 +1,8 @@
 import React from 'react';
 // import './App.css';
-import Button, {ButtonType,ButtonSize} from './components/Button/button';
+import Button, { ButtonType, ButtonSize } from './components/Button/button';
+import Menu from './components/Menu/menu';
+import MenuItem from './components/Menu/menuItem';
 
 function App() {
   return (
@@ -13,11 +15,30 @@ function App() {
           <Button target="_blank" btnType={ButtonType.Link} href="http://www.baidu.com">baidu link</Button>
           <Button btnType={ButtonType.Danger} >Danger</Button>
           <Button btnType={ButtonType.Default} >Danger</Button>
-          <Button btnType={ButtonType.Primary} >Primary</Button>
+        <Button btnType={ButtonType.Primary} >Primary</Button>
+        <Menu defaultIndex={0} mode="vertical" onSelect={(index) => { alert(index)}}>
+          <MenuItem index={0}>
+            cool link 0
+          </MenuItem>
+          <MenuItem  index={1} disabled>
+            cool link 1
+          </MenuItem>
+          <MenuItem  index={2}>
+            cool link 2
+          </MenuItem>
+        </Menu>
 
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
+        <Menu defaultIndex={0} onSelect={(index) => { alert(index)}}>
+          <MenuItem index={0}>
+            cool link 0
+          </MenuItem>
+          <MenuItem  index={1} disabled>
+            cool link 1
+          </MenuItem>
+          <MenuItem  index={2}>
+            cool link 2
+          </MenuItem>
+        </Menu>
         <a
           className="App-link"
           href="https://reactjs.org"

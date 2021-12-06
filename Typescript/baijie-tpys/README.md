@@ -29,6 +29,39 @@ Button 组件需求分析：
     npm install classnames --save // 便于切换类名
     npm install @types/classnames --save
 
+Menu 组件需求分析：
+
+1. 横向，竖向
+2. 高亮选中态
+3. 不可点击态
+4. 下拉菜单
+
+方案一：
+
+```js
+const items = [
+   {},
+   {}
+]
+<Menu defaultIndex={0} items={items} onSelect={} mode="vertical"></Menu>
+```
+
+方案二：
+
+```js
+<Menu defaultIndex={0} onSelect={} mode="vertical">
+<Menu.Item>
+title one
+</Menu.item>
+<Menu.Item disabiled>
+title two
+</Menu.item>
+<Menu.Item>
+<a href="xxx">title three</a>
+<Menu.item>
+</Menu>
+```
+
 组件测试
 高质量的代码
 更早的发现 bug,减少成本
