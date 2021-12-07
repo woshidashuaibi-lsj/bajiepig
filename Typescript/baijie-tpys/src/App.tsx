@@ -3,11 +3,13 @@ import React from 'react';
 import Button, { ButtonType, ButtonSize } from './components/Button/button';
 import Menu from './components/Menu/menu';
 import MenuItem from './components/Menu/menuItem';
+import SortableComponent from './components/Drag/dragSortable';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
+        <SortableComponent></SortableComponent>
           <Button disabled>hello</Button>
           <Button autoFocus size={ButtonSize.Large}>Large</Button>
           <Button className="custom" onClick={()=>{console.log(123);
