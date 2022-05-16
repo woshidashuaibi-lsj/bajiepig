@@ -25,7 +25,6 @@ const SortableItem = SortableElement(({ value }) => (
 		{value}
 	</li>
 ));
-console.log(SortableItem);
 const SortableList = SortableContainer(({ items }) => {
 	return (
 		<ul>
