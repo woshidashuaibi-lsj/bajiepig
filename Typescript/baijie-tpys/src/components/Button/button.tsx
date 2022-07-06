@@ -1,5 +1,6 @@
 import React from "react";
 import classNames from "classnames";
+import "../../../src/styles/index.scss";
 
 //定义按钮尺寸
 export enum ButtonSize {
