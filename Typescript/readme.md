@@ -65,3 +65,5 @@ undefind 表示没有当前存在这个值但是还没有给这个值赋值（�
 null 表示当前这个值就不应该存在
 （1） 作为函数的参数，表示该函数的参数不是对象。
 （2） 作为对象原型链的终点。
+
+安装 storybook npx -p @storybook/cli sb init
