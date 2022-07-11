@@ -25,7 +25,6 @@ const buttonWithSize = () => (
 	</>
 );
 storiesOf("Button Components", module)
-	.addDecorator(withInfo)
 	.addParameters({
 		info: {
 			text: `

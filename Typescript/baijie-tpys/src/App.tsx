@@ -10,6 +10,7 @@ import SortableComponent from "./components/Drag/dragSortable";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Icon from "./components/Icon/icon";
 import Transition from "./components/Transition/transition";
+import Input from "./components/Input/input";
 library.add(fas);
 
 function App() {
@@ -17,6 +18,11 @@ function App() {
 	return (
 		<div className="App">
 			<header className="App-header">
+				<Input
+					style={{ width: "300px" }}
+					placeholder="input with icon"
+					icon="search"
+				/>
 				<SortableComponent></SortableComponent>
 				<Button disabled>hello</Button>
 				<Button autoFocus size={ButtonSize.Large}>
@@ -24,6 +30,7 @@ function App() {
 				</Button>
 				<Icon icon="coffee" theme="primary" size="10x"></Icon>
 				<Icon icon="arrow-down" theme="danger" size="10x"></Icon>
+				<Input value={"这是个input"} />
 				<Button
 					className="custom"
 					onClick={() => {
