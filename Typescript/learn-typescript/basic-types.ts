@@ -32,7 +32,7 @@ numberOrString= 'abc'
 const arrOfNumbers: number[] = [1, 2, 3, 4] // 数组元素只能为number
 arrOfNumbers.push(5)
 function test() {
-    console.log(arguments); // 定义了一个方法就会生成一个类数组（没有数组的方法例如L：forEach等，并且不能给他直接赋值数组）
+ // 定义了一个方法就会生成一个类数组（没有数组的方法例如L：forEach等，并且不能给他直接赋值数组）
     arguments.length
 }
 
@@ -102,7 +102,7 @@ class Animal {
 }
 
 const snake = new Animal('lily')
-console.log(snake.run());
+
 //继承
 class Dog extends Animal {
     bark() {
@@ -111,13 +111,11 @@ class Dog extends Animal {
 }
 
 const xiaobao = new Dog('xiaobao')
-console.log(xiaobao.run());
-console.log(xiaobao.bark());
+
 
 class Cat extends Animal {
     constructor(name) {
         super(name)
-        console.log(this.name);
     }
     run() {
         return 'miao,'+ super.run()
@@ -125,7 +123,6 @@ class Cat extends Animal {
 }
 
 const LLL = new Cat('lsj')
-console.log(LLL.run());
 
 
 
