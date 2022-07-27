@@ -119,9 +119,9 @@ export const AutoComplete: FC<AutoCompleteProps> = (props) => {
 				in={showDropdown || loading}
 				animation="zoom-in-top"
 				timeout={300}
-				onExited={() => {
-					setSugestions([]);
-				}}
+				// onExited={() => {
+				// 	setSugestions([]);
+				// }}
 			>
 				<ul className="viking-suggestion-list">
 					{loading && (

@@ -25,7 +25,7 @@ function App() {
 				/>
 				<SortableComponent></SortableComponent>
 				<Button disabled>hello</Button>
-				<Button autoFocus size={ButtonSize.Large}>
+				<Button autoFocus size="lg">
 					Large
 				</Button>
 				<Icon icon="coffee" theme="primary" size="10x"></Icon>
@@ -36,20 +36,20 @@ function App() {
 					onClick={() => {
 						console.log(123);
 					}}
-					size={ButtonSize.Small}
+					size="sm"
 				>
 					Small
 				</Button>
 				<Button
 					target="_blank"
-					btnType={ButtonType.Link}
+					btnType="danger"
 					href="http://www.baidu.com"
 				>
 					baidu link
 				</Button>
-				<Button btnType={ButtonType.Danger}>Danger</Button>
-				<Button btnType={ButtonType.Default}>Danger</Button>
-				<Button btnType={ButtonType.Primary}>Primary</Button>
+				<Button btnType="default">Danger</Button>
+				<Button btnType="link">Danger</Button>
+				<Button btnType="primary">Primary</Button>
 				<FontAwesomeIcon icon={faCoffee} size="lg"></FontAwesomeIcon>
 				<Menu
 					defaultIndex={"0"}
@@ -96,7 +96,7 @@ function App() {
 					onClick={() => {
 						setShow(!show);
 					}}
-					size={ButtonSize.Small}
+					size="sm"
 				>
 					toggle
 				</Button>
