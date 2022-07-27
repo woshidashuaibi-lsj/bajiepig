@@ -11,18 +11,26 @@ export interface MenuProps {
 	mode?: MenuMode;
 	style?: React.CSSProperties;
 	onSelect?: SelectCallback;
-	defaultOpenSubMenus?:string[]
+	defaultOpenSubMenus?: string[];
 }
 interface IMenuContext {
 	index?: string;
 	onSelect?: SelectCallback;
 	mode?: MenuMode;
-	defaultOpenSubMenus?:string[]
+	defaultOpenSubMenus?: string[];
 }
 export const MenuContext = createContext<IMenuContext>({ index: "0" });
 
 const Menu: React.FC<MenuProps> = (props) => {
-	const { className, mode, style, children, defaultIndex, onSelect,defaultOpenSubMenus } = props;
+	const {
+		className,
+		mode,
+		style,
+		children,
+		defaultIndex,
+		onSelect,
+		defaultOpenSubMenus,
+	} = props;
 	const [currentActive, setCurrentActive] = useState(defaultIndex);
 	const classes = classNames("viking-menu", className, {
 		"menu-vertical": mode === "vertical",
@@ -38,7 +46,7 @@ const Menu: React.FC<MenuProps> = (props) => {
 		index: currentActive ? currentActive : "0",
 		onSelect: handleClick,
 		mode,
-		defaultOpenSubMenus
+		defaultOpenSubMenus,
 	};
 	const renderChildren = () => {
 		return React.Children.map(children, (child, index) => {
@@ -46,11 +54,12 @@ const Menu: React.FC<MenuProps> = (props) => {
 				child as React.FunctionComponentElement<MenuItemProps>;
 
 			const { displayName } = childElement.type;
-			console.log(displayName);
 
 			if (displayName === "MenuItem" || displayName === "SubMenu") {
 				// return child;
-				return React.cloneElement(childElement, { index: index.toString() });
+				return React.cloneElement(childElement, {
+					index: index.toString(),
+				});
 			} else {
 				console.error(
 					"wraming: menu has a child which is not menuitem components"
@@ -69,7 +78,7 @@ const Menu: React.FC<MenuProps> = (props) => {
 Menu.defaultProps = {
 	defaultIndex: "0",
 	mode: "horizontal",
-	defaultOpenSubMenus:[]
+	defaultOpenSubMenus: [],
 };
 
 export default Menu;

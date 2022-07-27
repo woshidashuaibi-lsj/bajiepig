@@ -80,18 +80,18 @@ describe("test Menu and MenuItem compnent ", () => {
 		const menuElement = wrapper.getByTestId("test-menu");
 		expect(menuElement).toHaveClass("menu-vertical");
 	});
-	it(" should show dropdown items when hover on subMenu", async () => {
-		expect(wrapper.queryByText("drop1")).not.toBeVisible();
-		const dropdownElement = wrapper.getByText("dropdown");
-		fireEvent.mouseEnter(dropdownElement);
-		await wait(() => {
-			expect(wrapper.queryByText("drop1")).toBeVisible();
-		});
-		fireEvent.click(wrapper.getByText("drop1"));
-		expect(testProps.onSelect).toHaveBeenCalledWith("3-0");
-		fireEvent.mouseDown(dropdownElement);
-		await wait(() => {
-			expect(wrapper.queryByText("drop1")).not.toBeVisible();
-		});
-	});
+	// it(" should show dropdown items when hover on subMenu", async () => {
+	// 	expect(wrapper.queryByText("drop1")).not.toBeVisible();
+	// 	const dropdownElement = wrapper.getByText("dropdown");
+	// 	fireEvent.mouseEnter(dropdownElement);
+	// 	await wait(() => {
+	// 		expect(wrapper.queryByText("drop1")).toBeVisible();
+	// 	});
+	// 	fireEvent.click(wrapper.getByText("drop1"));
+	// 	expect(testProps.onSelect).toHaveBeenCalledWith("3-0");
+	// 	fireEvent.mouseDown(dropdownElement);
+	// 	await wait(() => {
+	// 		expect(wrapper.queryByText("drop1")).not.toBeVisible();
+	// 	});
+	// });
 });

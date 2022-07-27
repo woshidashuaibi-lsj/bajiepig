@@ -20,7 +20,6 @@ interface TransitionProps extends CSSTransitionProps {
 
 const Transition: React.FC<TransitionProps> = (props) => {
 	const { children, classNames, animation, wrapper, ...restProps } = props;
-	console.log(props);
 
 	return (
 		<CSSTransition

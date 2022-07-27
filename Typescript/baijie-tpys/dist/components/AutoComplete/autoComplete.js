@@ -40,7 +40,6 @@ export var AutoComplete = function (props) {
     var _d = useState(false), loading = _d[0], setLoading = _d[1];
     var _e = useState(-1), highlightIndex = _e[0], setHighlightIndex = _e[1];
     var debouncedValue = useDebounce(inputValue, 300);
-    console.log(suggestions);
     useEffect(function () {
         if (debouncedValue && triggerSearch.current) {
             setSugestions([]);
@@ -77,8 +76,6 @@ export var AutoComplete = function (props) {
         setHighlightIndex(index);
     };
     var handleKeyDown = function (e) {
-        console.log(e.key);
-        console.log(e);
         switch (e.keyCode) {
             case 13:
                 if (suggestions[highlightIndex]) {

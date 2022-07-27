@@ -33,7 +33,6 @@ var SubMenu = function (_a) {
     };
     var timer;
     var handleMouse = function (e, toggle) {
-        console.log(toggle);
         clearTimeout(timer);
         e.preventDefault();
         timer = setTimeout(function () {

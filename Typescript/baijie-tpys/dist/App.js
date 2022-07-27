@@ -23,9 +23,7 @@ function App() {
             React.createElement(Icon, { icon: "coffee", theme: "primary", size: "10x" }),
             React.createElement(Icon, { icon: "arrow-down", theme: "danger", size: "10x" }),
             React.createElement(Input, { value: "这是个input" }),
-            React.createElement(Button, { className: "custom", onClick: function () {
-                    console.log(123);
-                }, size: "sm" }, "Small"),
+            React.createElement(Button, { className: "custom", size: "sm" }, "Small"),
             React.createElement(Button, { target: "_blank", btnType: "danger", href: "http://www.baidu.com" }, "baidu link"),
             React.createElement(Button, { btnType: "default" }, "Danger"),
             React.createElement(Button, { btnType: "link" }, "Danger"),

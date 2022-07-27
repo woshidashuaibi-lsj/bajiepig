@@ -18,16 +18,17 @@ var Menu = function (props) {
         index: currentActive ? currentActive : "0",
         onSelect: handleClick,
         mode: mode,
-        defaultOpenSubMenus: defaultOpenSubMenus
+        defaultOpenSubMenus: defaultOpenSubMenus,
     };
     var renderChildren = function () {
         return React.Children.map(children, function (child, index) {
             var childElement = child;
             var displayName = childElement.type.displayName;
-            console.log(displayName);
             if (displayName === "MenuItem" || displayName === "SubMenu") {
                 // return child;
-                return React.cloneElement(childElement, { index: index.toString() });
+                return React.cloneElement(childElement, {
+                    index: index.toString(),
+                });
             }
             else {
                 console.error("wraming: menu has a child which is not menuitem components");
@@ -40,6 +41,6 @@ var Menu = function (props) {
 Menu.defaultProps = {
     defaultIndex: "0",
     mode: "horizontal",
-    defaultOpenSubMenus: []
+    defaultOpenSubMenus: [],
 };
 export default Menu;

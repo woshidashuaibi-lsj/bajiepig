@@ -31,13 +31,7 @@ function App() {
 				<Icon icon="coffee" theme="primary" size="10x"></Icon>
 				<Icon icon="arrow-down" theme="danger" size="10x"></Icon>
 				<Input value={"这是个input"} />
-				<Button
-					className="custom"
-					onClick={() => {
-						console.log(123);
-					}}
-					size="sm"
-				>
+				<Button className="custom" size="sm">
 					Small
 				</Button>
 				<Button
